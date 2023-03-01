@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - FxTemporaire
   - BombExplosion
+  - Fuel
   layers:
   - Default
   - TransparentFX
