@@ -24,7 +24,7 @@ public enum Chain
 public class ThirdwebManager : MonoBehaviour
 {
     [Header("SETTINGS")]
-    public Chain chain = Chain.Goerli;
+    public Chain chain = Chain.FantomTestnet;
     public List<Chain> supportedNetworks;
 
     public Dictionary<Chain, string> chainIdentifiers = new Dictionary<Chain, string>
@@ -54,11 +54,16 @@ public class ThirdwebManager : MonoBehaviour
         if (Instance == null)
             Instance = this;
         else
-            Destroy(this.gameObject);
+            Destroy(gameObject);
 
 #if !UNITY_EDITOR
-        SDK = new ThirdwebSDK(chainIdentifiers[chain]);
+        SDK = new ThirdwebSDK(chainIdentifiers[chain], new ThirdwebSDK.Options() {
+            gasless = new ThirdwebSDK.GaslessOptions() {
+                    openzeppelin = new ThirdwebSDK.OZDefenderOptions() {
+                        relayerUrl = "https://api.defender.openzeppelin.com/autotasks/c48891ff-a56b-43b0-9d9e-37708b9064f5/runs/webhook/8db4ba89-3c75-4a75-9f0e-98d36b4337a3/HUh8nk6vax7WmuiJAmkFuQ"
+                    }
+            }
+        });
 #endif
     }
-
 }

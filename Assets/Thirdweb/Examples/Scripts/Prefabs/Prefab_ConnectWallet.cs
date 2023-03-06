@@ -108,6 +108,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
 
             wallet = _wallet;
             OnConnected();
+            PlayMakerGlobals.Instance.Variables.FindFsmBool("IsWalletConnected").Value = true;
             print($"Connected successfully to: {address}");
         }
         catch (Exception e)
@@ -149,6 +150,7 @@ public class Prefab_ConnectWallet : MonoBehaviour
         {
             await ThirdwebManager.Instance.SDK.wallet.Disconnect();
             OnDisconnected();
+            PlayMakerGlobals.Instance.Variables.FindFsmBool("IsWalletConnected").Value = false;
             print($"Disconnected successfully.");
 
         }
