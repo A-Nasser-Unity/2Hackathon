@@ -57,7 +57,7 @@ public class ThirdwebManager : MonoBehaviour
             Destroy(gameObject);
 
 #if !UNITY_EDITOR
-        SDK = new ThirdwebSDK(chainIdentifiers[chain], new ThirdwebSDK.Options() {
+        SDK = new ThirdwebSDK("https://fantom-testnet.rpc.thirdweb.com", new ThirdwebSDK.Options() {
             gasless = new ThirdwebSDK.GaslessOptions() {
                     openzeppelin = new ThirdwebSDK.OZDefenderOptions() {
                         relayerUrl = "https://api.defender.openzeppelin.com/autotasks/c48891ff-a56b-43b0-9d9e-37708b9064f5/runs/webhook/8db4ba89-3c75-4a75-9f0e-98d36b4337a3/HUh8nk6vax7WmuiJAmkFuQ"
