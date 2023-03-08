@@ -2,7 +2,9 @@
 
 [Try Game](https://airplane-td3v.vercel.app/)
 
-It's a game where user have to protect oil platform in the open ocean from the moving explosive mines by killing those mines using upgradable airplane.
+It's a 3d game where user have to protect oil platform in the open ocean from the moving explosive mines by killing those mines using upgradable airplane.
+
+User will be rewarded in Gold Tokens after completing the task. User can also buy Diamond tokens if they want too. Tokens can be used to buy Airplane skins, engines, machine guns, missiles and nitros to upgrade the airplane.
 
 We have used Unity, Thirdweb and Fantom to build the game and deploy the smart contracts.
 
