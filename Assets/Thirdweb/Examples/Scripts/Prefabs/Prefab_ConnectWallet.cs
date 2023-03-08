@@ -100,12 +100,19 @@ public class Prefab_ConnectWallet : MonoBehaviour
         networkDropdown.SetActive(false);
     }
 
+    public void ConnectAgain()
+    {
+        Wallet wallet = (Wallet)PlayMakerGlobals.Instance.Variables.GetFsmInt("WALLET").Value;
+        OnConnect(wallet);
+    }
+
     // Connecting
 
     public async void OnConnect(Wallet _wallet)
     {
         try
         {
+            PlayMakerGlobals.Instance.Variables.FindFsmInt("WALLET").Value = (int)_wallet;
             address = await ThirdwebManager.Instance.SDK.wallet.Connect(
                new WalletConnection()
                {

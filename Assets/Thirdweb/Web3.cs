@@ -12,6 +12,7 @@ using System.Text;
 public class Web3 : MonoBehaviour
 {
     string adminAddress = "0x0de82DCC40B8468639251b089f8b4A4400022e04";
+
     public void initializeVariables()
     {
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING0").Value = true;
@@ -63,6 +64,7 @@ public class Web3 : MonoBehaviour
         }
 
         setGoldBalance();
+
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
     }
 
@@ -100,6 +102,7 @@ public class Web3 : MonoBehaviour
         }
 
         setDiamondBalance();
+
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
     }
 
@@ -124,6 +127,7 @@ public class Web3 : MonoBehaviour
         }
 
         setGoldBalance();
+
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
     }
 
@@ -144,6 +148,7 @@ public class Web3 : MonoBehaviour
         }
 
         setDiamondBalance();
+
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
     }
 
@@ -338,6 +343,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnSkin1();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -362,6 +368,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnSkin2();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -386,6 +393,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnSkin3();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -410,6 +418,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnSkin4();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -434,6 +443,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnEngine1();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -458,6 +468,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnEngine2();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -482,6 +493,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnEngine3();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -506,6 +518,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnMachineGun1();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -530,6 +543,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnMachineGun2();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -554,6 +568,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnMachineGun3();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -578,6 +593,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnMissiles();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -602,6 +618,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnBomb();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -626,6 +643,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnNitro1();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -650,6 +668,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setGoldBalance();
         setOwnNitro2();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -674,6 +693,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnSkin1();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -698,6 +718,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnSkin2();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -722,6 +743,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnSkin3();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -746,6 +768,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnSkin4();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -770,6 +793,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnEngine1();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -794,6 +818,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnEngine2();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -818,6 +843,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnEngine3();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -842,6 +868,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnMachineGun1();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -866,6 +893,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnMachineGun2();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -890,6 +918,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnMachineGun3();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -914,6 +943,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnMissiles();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -938,6 +968,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnBomb();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -962,6 +993,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnNitro1();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;
@@ -986,6 +1018,7 @@ public class Web3 : MonoBehaviour
             PlayMakerGlobals.Instance.Variables.FindFsmBool("WasTransactionSuccessful").Value = false;
         }
 
+        setDiamondBalance();
         setOwnNitro2();
 
         PlayMakerGlobals.Instance.Variables.FindFsmBool("LOADING").Value = false;

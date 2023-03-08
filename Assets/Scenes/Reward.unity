@@ -325,7 +325,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 64
-        y: 112
+        y: 224
         width: 100
         height: 16
       isBreakpoint: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 272
-        y: 112
+        y: 224
         width: 100
         height: 32
       isBreakpoint: 0
@@ -388,7 +388,7 @@ MonoBehaviour:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: Effect
+        toState: BoolTest
         linkStyle: 0
         linkConstraint: 0
         linkTarget: 0
@@ -532,103 +532,13 @@ MonoBehaviour:
         - sendEvent
         paramDataPos: 0000000000000000010000000000000000000000000000000000000001000000000000000100000000000000
         paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000010000000100000000000000
-    - name: Effect
-      description: 
-      colorIndex: 0
-      position:
-        serializedVersion: 2
-        x: 480
-        y: 112
-        width: 100
-        height: 32
-      isBreakpoint: 0
-      isSequence: 0
-      hideUnused: 0
-      transitions:
-      - fsmEvent:
-          name: FINISHED
-          isSystemEvent: 1
-          isGlobal: 0
-        toState: BoolTest
-        linkStyle: 0
-        linkConstraint: 0
-        linkTarget: 0
-        colorIndex: 0
-      actionData:
-        actionNames:
-        - HutongGames.PlayMaker.Actions.SetBoolValue
-        - HutongGames.PlayMaker.Actions.Wait
-        customNames:
-        - 
-        - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000003000000
-        actionHashCodes: 27fbe10348c01101
-        unityObjectParams: []
-        fsmGameObjectParams: []
-        fsmOwnerDefaultParams: []
-        animationCurveParams: []
-        functionCallParams: []
-        fsmTemplateControlParams: []
-        fsmEventTargetParams: []
-        fsmPropertyParams: []
-        layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
-        fsmArrayParams: []
-        fsmEnumParams: []
-        fsmFloatParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmIntParams: []
-        fsmBoolParams:
-        - useVariable: 1
-          name: LOADING
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        fsmVector2Params: []
-        fsmVector3Params: []
-        fsmColorParams: []
-        fsmRectParams: []
-        fsmQuaternionParams: []
-        stringParams:
-        - FINISHED
-        byteData: 0000
-        arrayParamSizes: 
-        arrayParamTypes: []
-        customTypeSizes: 
-        customTypeNames: []
-        paramDataType: 1100000011000000010000000f0000001700000001000000
-        paramName:
-        - boolVariable
-        - boolValue
-        - everyFrame
-        - time
-        - finishEvent
-        - realTime
-        paramDataPos: 000000000100000000000000000000000000000001000000
-        paramByteDataSize: 000000000000000001000000000000000000000001000000
     - name: BoolTest
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 480
-        y: 208
+        y: 320
         width: 100
         height: 32
       isBreakpoint: 0
@@ -730,7 +640,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 480
-        y: 288
+        y: 400
         width: 137
         height: 48
       isBreakpoint: 0
@@ -814,7 +724,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 288
-        y: 304
+        y: 416
         width: 100
         height: 16
       isBreakpoint: 0
@@ -823,15 +733,19 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.AudioPlay
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 81294e04b2cf1000
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 00000000
+        actionStartIndex: 0000000003000000060000000b000000
+        actionHashCodes: 27fbe10327fbe10381294e04b2cf1000
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -878,6 +792,30 @@ MonoBehaviour:
           value: 1
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 1
+          name: LOADING
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: WasTransactionSuccessful
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -903,13 +841,19 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        byteData: 0000
+        byteData: 00000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000000f0000001800000011000000170000001400000011000000110000000100000001000000
+        paramDataType: 110000001100000001000000110000001100000001000000140000000f0000001800000011000000170000001400000011000000110000000100000001000000
         paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
+        - boolVariable
+        - boolValue
+        - everyFrame
         - gameObject
         - volume
         - oneShotClip
@@ -920,15 +864,15 @@ MonoBehaviour:
         - recursive
         - resetOnExit
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000000000000100000001000000020000000000000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000100000001000000
+        paramDataPos: 00000000010000000000000002000000030000000100000000000000000000000000000004000000000000000100000005000000060000000200000003000000
+        paramByteDataSize: 00000000000000000100000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000001000000
     - name: Error
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 720
-        y: 320
+        y: 432
         width: 100
         height: 16
       isBreakpoint: 0
@@ -937,15 +881,19 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        - HutongGames.PlayMaker.Actions.SetBoolValue
         - HutongGames.PlayMaker.Actions.AudioPlay
         - HutongGames.PlayMaker.Actions.ActivateGameObject
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0100
-        actionStartIndex: 0000000005000000
-        actionHashCodes: 81294e04b2cf1000
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 00000100
+        actionStartIndex: 0000000003000000060000000b000000
+        actionHashCodes: 27fbe10327fbe10381294e04b2cf1000
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -992,6 +940,30 @@ MonoBehaviour:
           value: 1
         fsmIntParams: []
         fsmBoolParams:
+        - useVariable: 1
+          name: LOADING
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: WasTransactionSuccessful
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -1017,13 +989,19 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - 
-        byteData: 0000
+        byteData: 00000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000000f0000001800000011000000170000001400000011000000110000000100000001000000
+        paramDataType: 110000001100000001000000110000001100000001000000140000000f0000001800000011000000170000001400000011000000110000000100000001000000
         paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
+        - boolVariable
+        - boolValue
+        - everyFrame
         - gameObject
         - volume
         - oneShotClip
@@ -1034,8 +1012,103 @@ MonoBehaviour:
         - recursive
         - resetOnExit
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000000000000100000001000000020000000000000001000000
-        paramByteDataSize: 00000000000000000000000000000000000000000000000000000000000000000100000001000000
+        paramDataPos: 00000000010000000000000002000000030000000100000000000000000000000000000004000000000000000100000005000000060000000200000003000000
+        paramByteDataSize: 00000000000000000100000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000001000000
+    - name: First
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 272
+        y: 112
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Clicked
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0000
+        actionStartIndex: 0000000003000000
+        actionHashCodes: 27fbe10327fbe103
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: LOADING
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: WasTransactionSuccessful
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 110000001100000001000000110000001100000001000000
+        paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos: 000000000100000000000000020000000300000001000000
+        paramByteDataSize: 000000000000000001000000000000000000000001000000
     events:
     - name: UI CLICK
       isSystemEvent: 1
@@ -1054,7 +1127,7 @@ MonoBehaviour:
         name: UI CLICK
         isSystemEvent: 1
         isGlobal: 0
-      toState: Clicked
+      toState: First
       linkStyle: 0
       linkConstraint: 0
       linkTarget: 0
